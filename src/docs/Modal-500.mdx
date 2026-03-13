@@ -1,0 +1,22 @@
+import { Title, Canvas, Meta, Primary, Source } from '@storybook/addon-docs/blocks'
+import RawCode2     from './Modal-500.tsx?raw'
+import RadialMap    from '../data/model_500.json?raw'
+import * as Stories from './Demo.stories'
+
+<Title>500 Nodes</Title>
+
+<Meta of={Stories} />
+
+### Overview
+This story presents the full interactive experience of the component.
+Use it as the main reference to explore zoom, pan, context menus, tooltip, and export actions.
+It is the best starting point to understand the overall behavior.
+<Canvas of={Stories.Radial500} withToolbar={true}
+    source={{code: RawCode2, language: 'tsx', dark: true}}
+/>
+
+<details>
+    <summary>Model</summary>
+    <Source code={RadialMap} language='json' dark={true}/>
+</details>
+

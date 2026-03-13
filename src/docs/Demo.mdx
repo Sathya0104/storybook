@@ -1,0 +1,47 @@
+import { Title, Canvas, Meta, Primary, Source } from '@storybook/addon-docs/blocks'
+import RawCode1     from '../App.tsx?raw'
+import RawCode2     from './Demo-radial.tsx?raw'
+import RawCode3     from './Demo-geo.tsx?raw'
+import GeoMap       from '../data/model_geo.json?raw'
+import RadialMap    from '../data/model_120.json?raw'
+import * as Stories from './Demo.stories'
+
+<Title>Demo</Title>
+
+<Meta of={Stories} />
+
+### Overview
+This story presents the full interactive experience of the component.
+Use it as the main reference to explore zoom, pan, context menus, tooltip, and export actions.
+It is the best starting point to understand the overall behavior.
+<Canvas of={Stories.Overview} withToolbar={true}
+    source={{code: RawCode1, language: 'tsx', dark: true}}
+/>
+
+## Simple Radial graph demo
+This example focuses on a compact radial layout with a clear hierarchy.
+It is useful to validate node spacing, edge readability, and central-node interactions.
+Use this demo when you want a quick, structured topology preview.
+
+<Canvas of={Stories.RadialDemo} withToolbar={true}
+    source={{code: RawCode2, language: 'tsx', dark: true}}
+/>
+
+<details>
+    <summary>Model</summary>
+    <Source code={RadialMap} language='json' dark={true}/>
+</details>
+
+## Simple Geo graph demo
+This story renders the graph on a geographic map with geolocated nodes.
+It helps verify map integration, geographic positioning, and long-distance connections.
+Use it to review the behavior of the geo layout in a realistic scenario.
+
+<Canvas of={Stories.GeoDemo} withToolbar={true}
+    source={{code: RawCode3, language: 'tsx', dark: true}}
+/>
+
+<details>
+    <summary>Model</summary>
+    <Source code={GeoMap} language='json' dark={true}/>
+</details>

@@ -1,0 +1,64 @@
+import { Meta, Markdown } from "@storybook/addon-docs/blocks"
+import Layer from "./Layer.png"
+import LayoutStrategy from "./Layout-strategy.png"
+import LayoutStrategyProposal from "./Layout-strategy-proposal.png"
+import LayoutUserInteractionProposal from "./Layout-user-interaction-proposal.png"
+
+<Meta title="REQUIREMENTS" />
+
+
+# Component Requirements
+
+- Network diagram visualization.
+- Support for various image formats for nodes (SVG, PNG, JPEG, etc.).
+- Custom tooltips for each node using Radix Tooltip.
+- Multiple connector types between nodes, such as solid lines, dotted lines, unidirectional (single arrow), and bidirectional arrows.
+- Custom arrow shapes to represent specific connections, such as firewall-blocked connections.
+- Support for different hex color codes and line widths for connector lines.
+- Labels for both nodes and connector lines.
+- Multi-level custom menus for each node using Radix Dropdown Menu.
+- Support for multiple node connection patterns, such as one-to-one, one-to-many, and many-to-many.
+- Third-party libraries should be React-based or have good React bindings, and should be actively maintained.
+- Visual transformations on mouse hover, such as color changes, width changes, and image changes, for both nodes and connector lines.
+- Grouping of nodes.
+- Zoom-in and zoom-out support.
+- Pan support.
+- Drag nodes support (good to have)
+- Ability to programmatically add and remove nodes and relative edge.
+- Keyboard navigable
+- Ability to export the current view as SVG and PNG, which can then be included in PDF or RTF documents.
+- Nodes plotted on a world map based on geolocation.
+- Geo map support
+- Animation of data flowing from one node to another (nice to have).
+- Ability to divide the view into multiple labeled quadrants (nice to have).
+- Support for programmatic collapse and expansion of nodes.
+- Automatic content adaptation based on container size (auto-resize).
+- Good performance with a large number of nodes and edges.
+
+## Layout strategy proposal
+
+<img src={LayoutStrategyProposal} alt="Layout strategy proposal" />
+
+## Layout strategy requirements
+
+- Layout with up to 4 expandable layout
+<img src={Layer} alt="Layer" />
+
+- Allow the visualization of up to 250 nodes, with a maximum of 50 nodes per level.
+- Parallel expansion must be supported for future enhance
+- When expanding Host B, Host A must collapse; however, Host A should still display at least the list of its IPs.
+- Evaluate to use a magnifying glass effect to keep context while focusing on expanded elements.
+- Aggregate connections by arrow type (from → to, to → from, bidirectional, blocked by firewall, etc.).
+- Aggregate entities by Enterprise vs. non-Enterprise.
+- Aggregate by host type (e.g server and client)
+
+Example of aggregation (cluster of hosts) through the choice in the dropdown menu,
+where the user can decide to aggregate by Enterprise Hosts, not Enterprise Hosts,
+Server Hosts, Client Hosts, or custom group hosts. For instance, in this example,
+two nodes are aggregated by Server Host, and we can only see Client Hosts connected to the Center Server.
+
+<img src={LayoutStrategy} alt="Layout strategy" />
+
+## Layout user interaction proposal
+
+<img src={LayoutUserInteractionProposal} alt="Layout user interaction proposal" />

@@ -1,0 +1,135 @@
+import { Title, Description, Controls, ArgTypes, Canvas, Meta, Source, Story } from '@storybook/addon-docs/blocks'
+import * as Stories from './NetworkGraph.stories'
+import Types        from './types/ComponentsType.ts?raw'
+// import PropsTable from '../../.storybook/StorybookPropsTable'
+
+<Title>NetworkGraph</Title>
+
+<Meta of={Stories} />
+
+The Network Graph Visualization component is .... bla bla bla
+
+<Canvas of={Stories.Basic} />
+
+## Properties
+<Controls of={Stories.Basic} />
+
+<details>
+    <summary>Interfaces</summary>
+    <Source code={Types} language='ts' dark={true}/>
+</details>
+
+
+## Tooltip
+
+Simple custom tooltip example:
+
+```tsx
+import { FC } from 'react'
+import { TooltipProvider } from '@radix-ui/react-tooltip'
+import { NetworkGraph } from './NetworkGraph'
+import { type NetworkGraphNodeTooltip } from './types/ComponentsType'
+
+const SimpleTooltip: FC<NetworkGraphNodeTooltip> = ({ node }) => {
+  return (
+    <div style={{ padding: 8 }}>
+      <strong>{node.text}</strong>
+      <div>{node.key}</div>
+    </div>
+  )
+}
+
+const Demo = () => {
+  return (
+    <TooltipProvider>
+      <NetworkGraph
+        config={...}
+        data={...}
+        renderNodeTooltip={SimpleTooltip}
+      />
+    </TooltipProvider>
+  )
+}
+```
+
+## Node Context Menu
+
+Simple custom node context menu example:
+
+```tsx
+import { FC } from 'react'
+import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
+import { NetworkGraph } from './NetworkGraph'
+import { type NetworkGraphNodeContextMenu } from "./ComponentsType"
+
+const SimpleNodeContextMenu: FC<NetworkGraphNodeContextMenu> = ({ open, onOpenChange, node }) => {
+
+  return (
+    <DropdownMenu.Root open={open} onOpenChange={onOpenChange}>
+      <DropdownMenu.Trigger asChild>
+        <div className="appContextIcon"><EllipsisSvg/></div>
+      </DropdownMenu.Trigger>
+      <DropdownMenu.Portal>
+        <DropdownMenu.Content side="right" align="start" sideOffset={5}>
+          <DropdownMenu.Item>IDS_ACTION_LAUNCH_MONITORS</DropdownMenu.Item>
+          <DropdownMenu.Item>IDS_ADD</DropdownMenu.Item>
+          <DropdownMenu.Item>IDS_EDIT</DropdownMenu.Item>
+          <DropdownMenu.Item>IDS_DELETE</DropdownMenu.Item>
+        </DropdownMenu.Content>
+      </DropdownMenu.Portal>
+    </DropdownMenu.Root>
+  )
+}
+
+const Demo = () => {
+  return (
+    <NetworkGraph
+      config={...}
+      data={...}
+      renderNodeContextMenu={SimpleNodeContextMenu}
+    />
+  )
+}
+```
+
+## API
+
+In React, components are designed to encapsulate their internal logic and state,
+making them reusable and maintainable. However, there are scenarios where we need
+access to specific functions or methods of a child component from its parent component.
+This is where React [useImperativeHandle](https://react.dev/reference/react/useImperativeHandle) comes into play, and here the list of
+methods that can be used with nsa-grid using this syntax:
+
+```tsx
+import { useRef, type ReactElement } from 'react'
+import { NetworkGraph, type NetworkGraphHandle } from './NetworkGraph'
+
+const Demo = (): ReactElement =>  {
+
+  const graphRef  = useRef<NetworkGraphHandle | null>(null)
+
+  return (
+    <>
+      <NetworkGraph
+        ref={graphRef}
+        config={...}
+        data={...}
+         />
+      <button onClick={() => graphRef.current?.downloadSvg('graph.svg')} >Export to CSV</button>
+    </>
+  )
+}
+```
+
+[//]: # (<PropsTable componentName="SBApi" expanded/>)
+
+
+{/* add to you if you want to add here the stories
+## Stories
+
+### OnNode click event
+<Canvas of={Stories.OnNodeClick} />
+
+### OnZoom Change event
+<Canvas of={Stories.OnZoomChange} />
+*/}
