@@ -45,6 +45,7 @@ export const OnNodeClick: Story = {
 export const OnZoomChange: Story = {
   args: {
     ...Basic.args,
-    onZoomChange: action('onZoomChange')
+    onZoomChange: action('onZoomChange'),
+    layout: "geo"
   }
 }

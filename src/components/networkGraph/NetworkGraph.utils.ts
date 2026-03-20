@@ -93,9 +93,11 @@ export function computeRadialLayout(params: {
   maxDepth: 1 | 2 | 3 | 4 |5 | 6 |7
   radii: Record<1 | 2 | 3 | 4 | 5 | 6  |7, number>
   childSpreadDeg: number
+  startAngle?: number
+
 }): Map<string, NodePos> {
   const { nodes, edges, centerKey, maxDepth, radii, childSpreadDeg } = params
-
+  const startAngle = params.startAngle ?? 0
   const levels = computeTreeLevels(nodes, edges, centerKey, maxDepth)
   const positions = new Map<string, NodePos>()
   positions.set(centerKey, { x: 0, y: 0 })
@@ -110,7 +112,8 @@ export function computeRadialLayout(params: {
   // Depth 1: uniform distribution.
   const lvl1 = byDepth[1]
   for (let i = 0; i < lvl1.length; i++) {
-    const a = (i / Math.max(1, lvl1.length)) * Math.PI * 2
+    // const a = (i / Math.max(1, lvl1.length)) * Math.PI * 
+     const a = startAngle + (i / Math.max(1, lvl1.length)) * Math.PI * 2
     positions.set(lvl1[i], { x: Math.cos(a) * radii[1], y: Math.sin(a) * radii[1] })
   }
 

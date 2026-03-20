@@ -282,6 +282,7 @@ export function computeRadialLayoutAdaptive(params: {
   }
   isExpandable?: (node: NetworkNode) => boolean
   nodeBox?: { w: number; h: number; pad?: number }
+  startAngle?: number
 }) {
   const rectRingsMinLvl1 = params.rectRingsMinLvl1 ?? 80
 
@@ -299,6 +300,7 @@ export function computeRadialLayoutAdaptive(params: {
       maxDepth: params.maxDepth,
       radii: params.radii,
       childSpreadDeg: params.childSpreadDeg,
+      startAngle: params.startAngle,
     })
 
     // return computeRadialLayoutDynamic({

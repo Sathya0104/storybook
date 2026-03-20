@@ -335,6 +335,8 @@ export const NetworkGraph = forwardRef<NetworkGraphHandle, NetworkGraphProps>(
 
     // CRITICAL FIX: Use the current focus node as layout center for infinite expansion
     const effectiveCenterKey = expansionPath[expansionPath.length - 1]
+    const hasBreadcrumb = expansionPath.length > 1
+    const startAngle = hasBreadcrumb ? Math.PI : 0
 
     // Compute radial layout for visible nodes
     const res = computeRadialLayoutAdaptive({
@@ -344,6 +346,7 @@ export const NetworkGraph = forwardRef<NetworkGraphHandle, NetworkGraphProps>(
       maxDepth: config.maxDepth,
       radii,
       childSpreadDeg: config.childSpreadDeg,
+      startAngle,
       rectRingsMinLvl1: 20,
       // NEW: lvl1 on rectangle perimeter with 2 rings
       level1Layout: {
@@ -357,28 +360,50 @@ export const NetworkGraph = forwardRef<NetworkGraphHandle, NetworkGraphProps>(
       nodeBox: { w: NODE_BOX_WIDTH, h: NODE_BOX_HEIGHT, pad: 25 },
     })
 
-    // CRITICAL FIX: Ensure ALL expansion path nodes have positions
-    // This guarantees breadcrumb trail nodes are always visible, even at infinite depth
-    expansionPath.forEach((pathKey, pathIdx) => {
-      if (!res.has(pathKey)) {
-        // Position breadcrumb nodes in a trail leading to the center
-        // Calculate offset based on position in path (earlier = further from center)
-        const distanceFromFocus = expansionPath.length - pathIdx - 1
+    // // CRITICAL FIX: Ensure ALL expansion path nodes have positions
+    // // This guarantees breadcrumb trail nodes are always visible, even at infinite depth
+    // expansionPath.forEach((pathKey, pathIdx) => {
+    //   if (!res.has(pathKey)) {
+    //     // Position breadcrumb nodes in a trail leading to the center
+    //     // Calculate offset based on position in path (earlier = further from center)
+    //     const distanceFromFocus = expansionPath.length - pathIdx - 1
         
-        if (distanceFromFocus > 0) {
-          // Place ancestor nodes in a breadcrumb trail
-          // Position them to the left and slightly above center
-          const breadcrumbX = 180 * distanceFromFocus
-          const breadcrumbY = -400
+    //     if (distanceFromFocus > 0) {
+    //       // Place ancestor nodes in a breadcrumb trail
+    //       // Position them to the left and slightly above center
+    //       const breadcrumbX = 180 * distanceFromFocus
+    //       const breadcrumbY = -400
           
-          res.set(pathKey, { x: breadcrumbX, y: breadcrumbY })
-        } else {
-          // This is the focus node itself - place at center
-          res.set(pathKey, { x: 0, y: 0 })
-        }
-      }
-    })
-
+    //       res.set(pathKey, { x: breadcrumbX, y: breadcrumbY })
+    //     } else {
+    //       // This is the focus node itself - place at center
+    //       res.set(pathKey, { x: 0, y: 0 })
+    //     }
+    //   }
+    // })
+    // CRITICAL FIX: Ensure ALL expansion path nodes have positions AND are on the LEFT side.
+// expansionPath.forEach((pathKey, pathIdx) => {
+//   const distanceFromFocus = expansionPath.length - pathIdx - 1
+//   if (distanceFromFocus === 0) {
+//     res.set(pathKey, { x: 0, y: 0 })                                      // focus = center
+//   } else {
+//     const breadcrumbX = -(halfW * 0.55 + 180 * distanceFromFocus)         // ← LEFT (negative X)
+//     const breadcrumbY = -(distanceFromFocus - 1) * 80
+//     res.set(pathKey, { x: breadcrumbX, y: breadcrumbY })                   // always override
+//   }
+// })
+// Ensure ALL expansion path nodes have positions AND are on the RIGHT side.
+expansionPath.forEach((pathKey, pathIdx) => {
+  const distanceFromFocus = expansionPath.length - pathIdx - 1
+  if (distanceFromFocus === 0) {
+    res.set(pathKey, { x: 0, y: 0 })                                      // focus = center
+  }
+   else {
+      const breadcrumbX = -(radii[1] + 180 * distanceFromFocus)
+      const breadcrumbY = 0
+      res.set(pathKey, { x: breadcrumbX, y: breadcrumbY })                  // always override
+  }
+})
     const end = performance.now()
     layoutTimeRef.current = Math.round(end - start)
     return res
@@ -1320,7 +1345,7 @@ export const NetworkGraph = forwardRef<NetworkGraphHandle, NetworkGraphProps>(
         style={{ left, top, width: NODE_BOX_WIDTH, height: NODE_BOX_HEIGHT }}
       >
         <div className="rng__nodeIconWrap">
-          <img className="rng__nodeIcon" src={n.icon} width={ICON_SIZE} height={ICON_SIZE} draggable={false} />
+          <img className="rng__nodeIcon" src={n.icon} width={ICON_SIZE} height={ICON_SIZE} draggable={false} alt={n.text} />
           {n.expandable && onNodeExpandableClick && (
             <button
               type="button"
