@@ -7,94 +7,94 @@
     },
     {
       "key": "N1",
-      "text": "Client 1",
+      "text": "Client",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "N2",
-      "text": "Client 2",
+      "text": "Client",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "N3",
-      "text": "Client 3",
+      "text": "Client",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "N4",
-      "text": "Client 4",
+      "text": "Client",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "N5",
-      "text": "Client 5",
+      "text": "Client",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A",
       "expandable": true
     },
     {
       "key": "N6",
-      "text": "Client 6 with long text",
+      "text": "Client",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "N7",
-      "text": "Client 7",
+      "text": "Client",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "N8",
-      "text": "Client 8",
+      "text": "Client",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "N9",
-      "text": "Client 9",
+      "text": "Client",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "N10",
-      "text": "Client 10",
+      "text": "Client",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "S1",
-      "text": "Service 1",
+      "text": "Service",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "S2",
-      "text": "Service 2",
+      "text": "Service",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "S3",
-      "text": "Service 3",
+      "text": "Service",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "S4",
-      "text": "Service 4",
+      "text": "Service",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "S5",
-      "text": "Service 5",
+      "text": "Service",
       "expandable": true,
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "S6",
-      "text": "Service 6",
+      "text": "Service",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "S7",
-      "text": "Service 7",
+      "text": "Service",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     },
     {
       "key": "S8",
-      "text": "Service 8",
+      "text": "Service",
       "icon": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%20%20%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2212%22%20rx%3D%222%22%20fill%3D%22%231D2939%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%228%22%20y%3D%2218%22%20width%3D%228%22%20height%3D%222%22%20rx%3D%221%22%20fill%3D%22%23667085%22%2F%3E%0A%3C%2Fsvg%3E%0A"
     }
   ],
